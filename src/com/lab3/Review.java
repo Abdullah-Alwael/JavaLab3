@@ -2,7 +2,7 @@ package com.lab3;
 
 public class Review {
     private String userName;
-    private int rating; // max is set to 5, and as low as 0
+    private int rating; // max is assumed to be 5, and as low as 0
     private String comment;
 
     public Review(String userName, int rating, String comment) {

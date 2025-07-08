@@ -1,5 +1,6 @@
 package com.lab3;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Music extends Media{
@@ -19,18 +20,46 @@ public class Music extends Media{
     }
 
     public void listen(User user){
-        //TODO  Allows users to listen to music.
+        boolean wasListened = false;
+        if (user == null) {
+            System.out.println("The user can not be empty");
+        } else {
+            Media[] userList = user.getPurchasedMediaList();
+            for (int i = 0; i <= userList.length - 1; i++) {
+                if (userList[i] == null) { // if the placeholder is not occupied, then add the media there.
+                    userList[i] = this; // add this music
+                    wasListened = true;
+                    break; // no need to add it multiple times, only once in an available slot.
+                }
+            }
+
+            if (wasListened) {
+                System.out.println("The music has been listened to successfully");
+            } else {
+                System.out.println("An error occurred while listening to the music"); // no more slots in user list
+            }
+        }
+
     }
 
-    public List<Music> generatePlaylist(List<Music>){
-        //TODO Generates a playlist of
-        //similar songs based on the artist (auteur).
+    public List<Music> generatePlaylist(List<Music> musicCatalog){
+        List<Music> recommendations = new ArrayList<>();
+        for (int i = 0; i <= musicCatalog.size()-1; i++) {
+            if (musicCatalog.get(i).getArtist().equals(this.getArtist())){
+                recommendations.add(musicCatalog.get(i));
+            }
+        }
+
+        return recommendations;
     }
 
     @Override
     public String getMediaType() {
-        //TODO  return "Premium Music" if the price more than
-        //or equal 10, else return "Music".
+        if (getPrice() >=10){
+            return "Premium Music";
+        } else {
+            return "Music";
+        }
     }
 
     @Override

@@ -46,7 +46,6 @@ public class Store {
     }
 
     public User[] displayUsers() {
-        //TODO Displays a list of registered users.
         for (int i = 0; i <= users.length - 1; i++) {
             if (users[i] == null) {
                 break; // reached final user
@@ -58,7 +57,6 @@ public class Store {
     }
 
     public void addMedia(Media media) {
-        //TODO  Adds a media to the list of medias
         boolean wasAdded = false;
         if (media == null) {
             System.out.println("The media can not be empty");
@@ -79,10 +77,26 @@ public class Store {
     }
 
     public Media[] displayMedias() {
-        //TODO Displays a list of Available medias.
+        for (int i = 0; i <= medias.length - 1; i++) {
+            if (medias[i] == null) {
+                break; // reached final media
+            } else {
+                System.out.println("Media " + i + ": " + medias[i]);
+            }
+        }
+        return medias; // displaying involves output, maybe unnecessary to return the list? since we also have getMedias()
     }
 
     public Book searchBook(String title) {
-        //TODO Searches for a book by title and returns it if found.
+        for (int i = 0; i <= medias.length - 1; i++) {
+            if (medias[i] == null) {
+                break; // reached final media
+            } else if (medias[i].getTitle().equals(title)
+                    && medias[i].getClass() == Book.class) {
+                return (Book) medias[i];
+            }
+        } // else {
+        // return a not null value to prevent the program from crashing (NullPointerException)
+        return new Book("Not found!", "NA", "NA", 0, 0); // Book not found
     }
 }

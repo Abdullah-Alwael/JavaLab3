@@ -13,7 +13,7 @@ public class Main {
         // create 5 books: with a list of 5 reviews
         // assuming rating can range from 0 to 5
 
-        //create a list of 5 reviews {Ai generated (not the code, only the input data)}
+        // create a list of 5 reviews {Ai generated (not the code, only the input data)}
         Review r1 = new Review(u1.getUserName(), 5, "A truly transformative read. This book changed my perspective on life and pursuing dreams. Simple yet profound.");
         Review r2 = new Review(u2.getUserName(), 4, "Beautifully written fable that inspires. While some parts felt a bit simplistic, the overall message is powerful.");
         Review r3 = new Review(u3.getUserName(), 3, "An interesting allegorical tale. It's a quick read, but I found the philosophical elements a bit too on-the-nose at times.");
@@ -35,13 +35,13 @@ public class Main {
         r5 = new Review(u5.getUserName(), 2, "While the principles are good, it feels like common sense repackaged. Not as groundbreaking as I expected.");
 
         // add the reviews to the book
-        b1.addReview(r1);
-        b1.addReview(r2);
-        b1.addReview(r3);
-        b1.addReview(r4);
-        b1.addReview(r5);
-
         Book b2 = new Book("Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones","James Clear","978-0735211292",17.99*3.75,30);
+        b2.addReview(r1);
+        b2.addReview(r2);
+        b2.addReview(r3);
+        b2.addReview(r4);
+        b2.addReview(r5);
+
 
         r1 = new Review(u1.getUserName(), 5, "Absolutely captivating! Evelyn Hugo is an unforgettable character, and her story is full of glamour, heartbreak, and unexpected twists.");
         r2 = new Review(u2.getUserName(), 4, "A brilliant read with a compelling protagonist. The storytelling is fantastic, though the ending felt a little rushed.");
@@ -50,13 +50,13 @@ public class Main {
         r5 = new Review(u5.getUserName(), 2, "Found it difficult to connect with the characters. The constant jumping between timelines was a bit jarring and pulled me out of the story.");
 
         // add the reviews to the book
-        b1.addReview(r1);
-        b1.addReview(r2);
-        b1.addReview(r3);
-        b1.addReview(r4);
-        b1.addReview(r5);
-
         Book b3 = new Book("The Seven Husbands of Evelyn Hugo","Taylor Jenkins Reid","978-1501161933",17*3.75,25);
+        b3.addReview(r1);
+        b3.addReview(r2);
+        b3.addReview(r3);
+        b3.addReview(r4);
+        b3.addReview(r5);
+
 
         r1 = new Review(u1.getUserName(), 5, "A timeless masterpiece. The themes of justice, prejudice, and empathy are as relevant today as they were when it was written. A must-read for everyone.");
         r2 = new Review(u2.getUserName(), 4, "A powerful and important book. The narrative from Scout's perspective is brilliant, though the pacing can be slow at times.");
@@ -65,13 +65,13 @@ public class Main {
         r5 = new Review(u5.getUserName(), 2, "Required reading, but I struggled to get into it. The prose felt a bit dense, and the plot didn't grip me.");
 
         // add the reviews to the book
-        b1.addReview(r1);
-        b1.addReview(r2);
-        b1.addReview(r3);
-        b1.addReview(r4);
-        b1.addReview(r5);
-
         Book b4 = new Book("To Kill a Mockingbird","Harper Lee","978-0060935467",16.99*3.75,40);
+        b4.addReview(r1);
+        b4.addReview(r2);
+        b4.addReview(r3);
+        b4.addReview(r4);
+        b4.addReview(r5);
+
 
         r1 = new Review(u1.getUserName(), 5, "Absolutely incredible! A thrilling, funny, and scientifically brilliant adventure. Ryland Grace is one of the most endearing protagonists ever.");
         r2 = new Review(u2.getUserName(), 4, "Andy Weir delivers again! The science is fascinating, and the story is a rollercoaster. A fantastic read for sci-fi fans, though some parts might be a bit too technical for casual readers.");
@@ -80,13 +80,13 @@ public class Main {
         r5 = new Review(u5.getUserName(), 1, "Couldn't get past the first few chapters. The protagonist's voice was irritating, and the constant scientific explanations bogged down the story.");
 
         // add the reviews to the book
-        b1.addReview(r1);
-        b1.addReview(r2);
-        b1.addReview(r3);
-        b1.addReview(r4);
-        b1.addReview(r5);
-
         Book b5 = new Book("Project Hail Mary","Andy Weir","978-0593135204",18*3.75,50);
+        b5.addReview(r1);
+        b5.addReview(r2);
+        b5.addReview(r3);
+        b5.addReview(r4);
+        b5.addReview(r5);
+
 
         // add 5 movies
         

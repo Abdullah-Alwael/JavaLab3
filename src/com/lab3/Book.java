@@ -2,7 +2,7 @@ package com.lab3;
 
 public class Book extends Media{
     private int stock; // quantity in stock
-    private Review[] review; // list of reviews
+    private Review[] review = new Review[100]; // list of 100 reviews
 
     public Book(String title, String author, String ISBN, double price, int stock) {
         super(title, author, ISBN, price);

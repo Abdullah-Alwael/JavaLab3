@@ -3,8 +3,8 @@ package com.lab3;
 public class Novel extends Book {
     private String genre;
 
-    public Novel(String title, String author, String ISBN, double price, int stock, Review[] review, String genre) {
-        super(title, author, ISBN, price, stock, review);
+    public Novel(String title, String author, String ISBN, double price, int stock, String genre) {
+        super(title, author, ISBN, price, stock);
         this.genre = genre;
     }
 

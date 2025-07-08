@@ -5,8 +5,8 @@ import java.util.List;
 public class Music extends Media{
     private String artist;
 
-    public Music(String title, String author, String ISBN, double price, String artist) {
-        super(title, author, ISBN, price);
+    public Music(String title, String author, double price, String artist) {
+        super(title, author, "Music", price); // no ISBN for music items
         this.artist = artist;
     }
 

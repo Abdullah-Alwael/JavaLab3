@@ -3,6 +3,7 @@ package com.lab3;
 public class Main {
     public static void main(String[] args) {
         // create initial 5 users who have bought and reviewed everything from the store:
+        // test all methods
 
         User u1 = new User("Abdullah.Fahad", "abdullah@company.com");
         User u2 = new User("Ahmed.Hamed", "ahmed@company.com");
@@ -10,10 +11,10 @@ public class Main {
         User u4 = new User("Mohammed.Raed", "mohammed@company.com");
         User u5 = new User("Rashid.Mohammed", "rashid@company.com");
 
-        // create 5 books: with a list of 5 reviews
+        // create 5 books: with a list of 5 initial reviews
         // assuming rating can range from 0 to 5
 
-        // create a list of 5 reviews {Ai generated (not the code, only the input data)}
+        // create a list of 5 reviews {Ai generated with some fictional data (not the code, only the input data)}
         Review r1 = new Review(u1.getUserName(), 5, "A truly transformative read. This book changed my perspective on life and pursuing dreams. Simple yet profound.");
         Review r2 = new Review(u2.getUserName(), 4, "Beautifully written fable that inspires. While some parts felt a bit simplistic, the overall message is powerful.");
         Review r3 = new Review(u3.getUserName(), 3, "An interesting allegorical tale. It's a quick read, but I found the philosophical elements a bit too on-the-nose at times.");
@@ -88,8 +89,37 @@ public class Main {
         b5.addReview(r5);
 
 
-        // add 5 movies
-        
+        // create 5 movies
+        Movie mov1 = new Movie("The Chronos Key","Dr. Aris Thorne",19.99*3.75,135);
+        Movie mov2 = new Movie("Whispers in the Nebula","Seraphina Vane",14.99*3.75,110);
+        Movie mov3 = new Movie("The Emerald Labyrinth","Marcus Max Orion",24.99*3.75,150);
+        Movie mov4 = new Movie("Silicon Echoes","Kira Thorne",12.99*3.75,100);
+        Movie mov5 = new Movie("The Last Starfall","Elias Vance",29.99*3.75,125);
 
+        // create 5 music items, based on Gemini Ai, the author is different from the artist for music
+        Music mu1 = new Music("Starlight Serenade", "Melody Weaver", 12.99*3.75, "The Lumina Ensemble");
+        Music mu2 = new Music("Echoes of Tomorrow", "Lyricist X & Beat Master B", 1.29*3.75, "Nova Bloom");
+        Music mu3 = new Music("The Groove Collective", "Jam Session Crew", 7.99*3.75, "Funk Propulsion");
+        Music mu4 = new Music("A Symphony of Seasons", "Dr. Elias Vance", 18.5*3.75, "The Grand Epoch Orchestra");
+        Music mu5 = new Music("Midnight Reverie", "Luna Sol", 27.99*3.75, "Luna Sol");
+
+        // create 5 novels
+        Novel n1 = new Novel("Dune","Frank Herbert","978-0441172719",15.99*3.75,43,"Science Fiction");
+        Novel n2 = new Novel("The Midnight Library","Matt Haig","978-0143135504",17*3.75,38,"Fantasy");
+        Novel n3 = new Novel("Where the Crawdads Sing","Delia Owens","978-0735219090",18*3.75,80,"Mystery");
+        Novel n4 = new Novel("The Henna Artist","Alka Joshi","978-1982150371",16.99*3.75,24,"Historical");
+        Novel n5 = new Novel("The Martian","Andy Weir","978-0553418026",16*3.75,60,"Science Fiction");
+
+        // create 5 academic books
+        AcademicBook ab1 = new AcademicBook("Thinking, Fast and Slow","Daniel Kahneman","978-0374533557",18*3.75,63,"Psychology");
+        AcademicBook ab2 = new AcademicBook("Sapiens: A Brief History of Humankind","Yuval Noah Harari","978-0062316097",20*3.75,150,"History");
+        AcademicBook ab3 = new AcademicBook("The Structure of Scientific Revolutions","Thomas S. Kuhn","978-0226458083",17*3.75,63,"Philosophy");
+        AcademicBook ab4 = new AcademicBook("Discipline and Punish: The Birth of the Prison","Michel Foucault","978-0679752554",19*3.75,58,"Sociology");
+        AcademicBook ab5 = new AcademicBook("Principles of Economics","N. Gregory Mankiw","978-1337096898",250*3.75,94,"Economics");
+
+        // create the store and add all media items to it
+        Store store = new Store(new User[]{u1, u2, u3, u4, u5}
+                , new Media[]{b1,b2,b3,b4,b5,mov1,mov2,mov3,mov4,mov5,
+                mu1,mu2,mu3,mu4,mu5,n1,n2,n3,n4,n5,ab1,ab2,ab3,ab4,ab5});
     }
 }

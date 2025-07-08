@@ -5,8 +5,8 @@ import java.util.List;
 public class Movie extends Media {
     private int duration; // in minutes
 
-    public Movie(String title, String author, String ISBN, double price, int duration) {
-        super(title, author, ISBN, price);
+    public Movie(String title, String author, double price, int duration) {
+        super(title, author, "Movie", price); // no ISBN for movies
         this.duration = duration;
     }
 

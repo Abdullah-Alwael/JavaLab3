@@ -3,8 +3,8 @@ package com.lab3;
 public class AcademicBook extends Book{
     private String subject;
 
-    public AcademicBook(String title, String author, String ISBN, double price, int stock, Review[] review, String subject) {
-        super(title, author, ISBN, price, stock, review);
+    public AcademicBook(String title, String author, String ISBN, double price, int stock, String subject) {
+        super(title, author, ISBN, price, stock);
         this.subject = subject;
     }
 

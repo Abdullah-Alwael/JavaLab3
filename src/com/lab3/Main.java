@@ -121,8 +121,10 @@ public class Main {
         AcademicBook ab5 = new AcademicBook("Principles of Economics", "N. Gregory Mankiw", "978-1337096898", 250 * 3.75, 94, "Economics");
 
         // create the store and add all media items to it
-        Store store = new Store(new User[]{u1, u2, u3, u4, u5}
-                , new Media[]{b1, b2, b3, b4, b5, mov1, mov2, mov3, mov4, mov5,
+        Store store = new Store();
+
+        store.setUsers(new User[]{u1, u2, u3, u4, u5});
+        store.setMedias(new Media[]{b1, b2, b3, b4, b5, mov1, mov2, mov3, mov4, mov5,
                 mu1, mu2, mu3, mu4, mu5, n1, n2, n3, n4, n5, ab1, ab2, ab3, ab4, ab5});
     }
 }

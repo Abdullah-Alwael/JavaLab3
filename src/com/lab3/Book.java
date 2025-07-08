@@ -65,9 +65,9 @@ public class Book extends Media {
             }
 
             if (wasPurchased) {
-                System.out.println("The "+getMediaType()+" was purchased successfully");
+                System.out.println("The " + getMediaType() + " was purchased successfully");
             } else {
-                System.out.println("An error occurred while purchasing the "+getMediaType()); // no more slots in user list
+                System.out.println("An error occurred while purchasing the " + getMediaType()); // no more slots in user list
             }
         }
 
@@ -86,8 +86,8 @@ public class Book extends Media {
             System.out.println("Cant restock negative or zero times!");
         } else {
             stock += quantity;
-            System.out.println("Restocked "+quantity+" books with title: "+getTitle());
-            System.out.println("Total stock = "+stock);
+            System.out.println("Restocked " + quantity + " books with title: " + getTitle());
+            System.out.println("Total stock = " + stock);
         }
     }
 
@@ -109,7 +109,7 @@ public class Book extends Media {
 
     @Override
     public String getMediaType() {
-        if (getAverageRating() >= 4.5){
+        if (getAverageRating() >= 4.5) {
             return "Bestselling book";
         } else {
             return "Book";

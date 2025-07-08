@@ -1,4 +1,5 @@
 package com.lab3;
+
 // deadline 8AM, make clear tests
 // check all set methods for input validation
 public class Main {
@@ -23,7 +24,7 @@ public class Main {
         Review r5 = new Review(u5.getUserName(), 5, "Every time I read this book, I discover something new. It's a timeless classic that motivates you to follow your heart.");
 
         // add the reviews to the book
-        Book b1 = new Book("The Alchemist","Paulo Coelho","978-0061122415",16.99*3.75,25);
+        Book b1 = new Book("The Alchemist", "Paulo Coelho", "978-0061122415", 16.99 * 3.75, 25);
         b1.addReview(r1);
         b1.addReview(r2);
         b1.addReview(r3);
@@ -37,7 +38,7 @@ public class Main {
         r5 = new Review(u5.getUserName(), 2, "While the principles are good, it feels like common sense repackaged. Not as groundbreaking as I expected.");
 
         // add the reviews to the book
-        Book b2 = new Book("Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones","James Clear","978-0735211292",17.99*3.75,30);
+        Book b2 = new Book("Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones", "James Clear", "978-0735211292", 17.99 * 3.75, 30);
         b2.addReview(r1);
         b2.addReview(r2);
         b2.addReview(r3);
@@ -52,7 +53,7 @@ public class Main {
         r5 = new Review(u5.getUserName(), 2, "Found it difficult to connect with the characters. The constant jumping between timelines was a bit jarring and pulled me out of the story.");
 
         // add the reviews to the book
-        Book b3 = new Book("The Seven Husbands of Evelyn Hugo","Taylor Jenkins Reid","978-1501161933",17*3.75,25);
+        Book b3 = new Book("The Seven Husbands of Evelyn Hugo", "Taylor Jenkins Reid", "978-1501161933", 17 * 3.75, 25);
         b3.addReview(r1);
         b3.addReview(r2);
         b3.addReview(r3);
@@ -67,7 +68,7 @@ public class Main {
         r5 = new Review(u5.getUserName(), 2, "Required reading, but I struggled to get into it. The prose felt a bit dense, and the plot didn't grip me.");
 
         // add the reviews to the book
-        Book b4 = new Book("To Kill a Mockingbird","Harper Lee","978-0060935467",16.99*3.75,40);
+        Book b4 = new Book("To Kill a Mockingbird", "Harper Lee", "978-0060935467", 16.99 * 3.75, 40);
         b4.addReview(r1);
         b4.addReview(r2);
         b4.addReview(r3);
@@ -82,7 +83,7 @@ public class Main {
         r5 = new Review(u5.getUserName(), 1, "Couldn't get past the first few chapters. The protagonist's voice was irritating, and the constant scientific explanations bogged down the story.");
 
         // add the reviews to the book
-        Book b5 = new Book("Project Hail Mary","Andy Weir","978-0593135204",18*3.75,50);
+        Book b5 = new Book("Project Hail Mary", "Andy Weir", "978-0593135204", 18 * 3.75, 50);
         b5.addReview(r1);
         b5.addReview(r2);
         b5.addReview(r3);
@@ -91,36 +92,38 @@ public class Main {
 
 
         // create 5 movies
-        Movie mov1 = new Movie("The Chronos Key","Dr. Aris Thorne",19.99*3.75,135);
-        Movie mov2 = new Movie("Whispers in the Nebula","Seraphina Vane",14.99*3.75,110);
-        Movie mov3 = new Movie("The Emerald Labyrinth","Marcus Max Orion",24.99*3.75,150);
-        Movie mov4 = new Movie("Silicon Echoes","Kira Thorne",12.99*3.75,100);
-        Movie mov5 = new Movie("The Last Starfall","Elias Vance",29.99*3.75,125);
+        Movie mov1 = new Movie("The Chronos Key", "Dr. Aris Thorne", 19.99 * 3.75, 135);
+        Movie mov2 = new Movie("Whispers in the Nebula", "Seraphina Vane", 14.99 * 3.75, 110);
+        Movie mov3 = new Movie("The Emerald Labyrinth", "Marcus Max Orion", 24.99 * 3.75, 150);
+        Movie mov4 = new Movie("Silicon Echoes", "Kira Thorne", 12.99 * 3.75, 100);
+        Movie mov5 = new Movie("The Last Starfall", "Elias Vance", 29.99 * 3.75, 125);
 
         // create 5 music items, based on Gemini Ai, the author is different from the artist for music
-        Music mu1 = new Music("Starlight Serenade", "Melody Weaver", 12.99*3.75, "The Lumina Ensemble");
-        Music mu2 = new Music("Echoes of Tomorrow", "Lyricist X & Beat Master B", 1.29*3.75, "Nova Bloom");
-        Music mu3 = new Music("The Groove Collective", "Jam Session Crew", 7.99*3.75, "Funk Propulsion");
-        Music mu4 = new Music("A Symphony of Seasons", "Dr. Elias Vance", 18.5*3.75, "The Grand Epoch Orchestra");
-        Music mu5 = new Music("Midnight Reverie", "Luna Sol", 27.99*3.75, "Luna Sol");
+        Music mu1 = new Music("Starlight Serenade", "Melody Weaver", 12.99 * 3.75, "The Lumina Ensemble");
+        Music mu2 = new Music("Echoes of Tomorrow", "Lyricist X & Beat Master B", 1.29 * 3.75, "Nova Bloom");
+        Music mu3 = new Music("The Groove Collective", "Jam Session Crew", 7.99 * 3.75, "Funk Propulsion");
+        Music mu4 = new Music("A Symphony of Seasons", "Dr. Elias Vance", 18.5 * 3.75, "The Grand Epoch Orchestra");
+        Music mu5 = new Music("Midnight Reverie", "Luna Sol", 27.99 * 3.75, "Luna Sol");
 
         // create 5 novels
-        Novel n1 = new Novel("Dune","Frank Herbert","978-0441172719",15.99*3.75,43,"Science Fiction");
-        Novel n2 = new Novel("The Midnight Library","Matt Haig","978-0143135504",17*3.75,38,"Fantasy");
-        Novel n3 = new Novel("Where the Crawdads Sing","Delia Owens","978-0735219090",18*3.75,80,"Mystery");
-        Novel n4 = new Novel("The Henna Artist","Alka Joshi","978-1982150371",16.99*3.75,24,"Historical");
-        Novel n5 = new Novel("The Martian","Andy Weir","978-0553418026",16*3.75,60,"Science Fiction");
+        //TODO add reviews
+        Novel n1 = new Novel("Dune", "Frank Herbert", "978-0441172719", 15.99 * 3.75, 43, "Science Fiction");
+        Novel n2 = new Novel("The Midnight Library", "Matt Haig", "978-0143135504", 17 * 3.75, 38, "Fantasy");
+        Novel n3 = new Novel("Where the Crawdads Sing", "Delia Owens", "978-0735219090", 18 * 3.75, 80, "Mystery");
+        Novel n4 = new Novel("The Henna Artist", "Alka Joshi", "978-1982150371", 16.99 * 3.75, 24, "Historical");
+        Novel n5 = new Novel("The Martian", "Andy Weir", "978-0553418026", 16 * 3.75, 60, "Science Fiction");
 
         // create 5 academic books
-        AcademicBook ab1 = new AcademicBook("Thinking, Fast and Slow","Daniel Kahneman","978-0374533557",18*3.75,63,"Psychology");
-        AcademicBook ab2 = new AcademicBook("Sapiens: A Brief History of Humankind","Yuval Noah Harari","978-0062316097",20*3.75,150,"History");
-        AcademicBook ab3 = new AcademicBook("The Structure of Scientific Revolutions","Thomas S. Kuhn","978-0226458083",17*3.75,63,"Philosophy");
-        AcademicBook ab4 = new AcademicBook("Discipline and Punish: The Birth of the Prison","Michel Foucault","978-0679752554",19*3.75,58,"Sociology");
-        AcademicBook ab5 = new AcademicBook("Principles of Economics","N. Gregory Mankiw","978-1337096898",250*3.75,94,"Economics");
+        //TODO add reviews
+        AcademicBook ab1 = new AcademicBook("Thinking, Fast and Slow", "Daniel Kahneman", "978-0374533557", 18 * 3.75, 63, "Psychology");
+        AcademicBook ab2 = new AcademicBook("Sapiens: A Brief History of Humankind", "Yuval Noah Harari", "978-0062316097", 20 * 3.75, 150, "History");
+        AcademicBook ab3 = new AcademicBook("The Structure of Scientific Revolutions", "Thomas S. Kuhn", "978-0226458083", 17 * 3.75, 63, "Philosophy");
+        AcademicBook ab4 = new AcademicBook("Discipline and Punish: The Birth of the Prison", "Michel Foucault", "978-0679752554", 19 * 3.75, 58, "Sociology");
+        AcademicBook ab5 = new AcademicBook("Principles of Economics", "N. Gregory Mankiw", "978-1337096898", 250 * 3.75, 94, "Economics");
 
         // create the store and add all media items to it
         Store store = new Store(new User[]{u1, u2, u3, u4, u5}
-                , new Media[]{b1,b2,b3,b4,b5,mov1,mov2,mov3,mov4,mov5,
-                mu1,mu2,mu3,mu4,mu5,n1,n2,n3,n4,n5,ab1,ab2,ab3,ab4,ab5});
+                , new Media[]{b1, b2, b3, b4, b5, mov1, mov2, mov3, mov4, mov5,
+                mu1, mu2, mu3, mu4, mu5, n1, n2, n3, n4, n5, ab1, ab2, ab3, ab4, ab5});
     }
 }

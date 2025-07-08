@@ -1,6 +1,6 @@
 package com.lab3;
 
-public class AcademicBook extends Book{
+public class AcademicBook extends Book {
     private String subject;
 
     public AcademicBook(String title, String author, String ISBN, double price, int stock, String subject) {
@@ -18,12 +18,15 @@ public class AcademicBook extends Book{
 
     @Override
     public String getMediaType() {
-        //TODO "Bestselling AcademicBook" if Average Rating more
-        //than or equal 4.5, {else} return "AcademicBook".
+        if (getAverageRating() >= 4.5) {
+            return "Bestselling AcademicBook";
+        } else {
+            return "AcademicBook";
+        }
     }
 
     @Override
     public String toString() {
-        return "Media type: "+getMediaType()+", subject: "+subject+", "+super.toString();
+        return "Media type: " + getMediaType() + ", subject: " + subject + ", " + super.toString();
     }
 }

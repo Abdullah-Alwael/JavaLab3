@@ -45,14 +45,15 @@ public class User {
         this.shoppingCart = shoppingCart;
     }
 
-    public void addToCart(Media media){
+    public void addToCart(Media media) {
         //TODO Adds media to the user's shopping cart.
     }
-    public void removeFromCart(Media media){
+
+    public void removeFromCart(Media media) {
         //TODO  Removes media from the shopping cart.
     }
 
-    public void checkOut(){
+    public void checkOut() {
         //TODO Completes the purchase and updates purchased media list
         // {and} stock.
     }

@@ -45,11 +45,12 @@ public class Media {
         this.price = price;
     }
 
-    public String getMediaType(){
+    public String getMediaType() {
         return "Media";
     }
-    public String toString(){
-        return "Media title: "+title+", author: "+author+", ISBN: "+ISBN+", price: "+price;
+
+    public String toString() {
+        return "Media title: " + title + ", author: " + author + ", ISBN: " + ISBN + ", price: " + price;
     }
 
 }

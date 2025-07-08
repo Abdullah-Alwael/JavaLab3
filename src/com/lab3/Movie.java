@@ -34,16 +34,17 @@ public class Movie extends Media {
             }
 
             if (wasWatched) {
-                System.out.println("The "+getMediaType()+" has been watched successfully");
+                System.out.println("The " + getMediaType() + " has been watched successfully");
             } else {
-                System.out.println("An error occurred while watching the "+getMediaType()); // no more slots in user list
+                System.out.println("An error occurred while watching the " + getMediaType()); // no more slots in user list
             }
         }
     }
-    public List<Movie> recommendSimilarMovies(List<Movie> movieCatalog){
+
+    public List<Movie> recommendSimilarMovies(List<Movie> movieCatalog) {
         List<Movie> recommendations = new ArrayList<>();
-        for (int i = 0; i <= movieCatalog.size()-1; i++) {
-            if (movieCatalog.get(i).getAuthor().equals(this.getAuthor())){
+        for (int i = 0; i <= movieCatalog.size() - 1; i++) {
+            if (movieCatalog.get(i).getAuthor().equals(this.getAuthor())) {
                 recommendations.add(movieCatalog.get(i));
             }
         }
@@ -52,8 +53,8 @@ public class Movie extends Media {
     }
 
     @Override
-    public String getMediaType(){
-        if (duration >=120){
+    public String getMediaType() {
+        if (duration >= 120) {
             return "Long Movie";
         } else {
             return "Movie";
@@ -62,6 +63,6 @@ public class Movie extends Media {
 
     @Override
     public String toString() {
-        return "Media type: "+getMediaType()+", duration: "+duration+", "+super.toString();
+        return "Media type: " + getMediaType() + ", duration: " + duration + ", " + super.toString();
     }
 }

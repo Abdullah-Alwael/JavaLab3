@@ -3,7 +3,7 @@ package com.lab3;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Music extends Media{
+public class Music extends Media {
     private String artist;
 
     public Music(String title, String author, double price, String artist) {
@@ -19,7 +19,7 @@ public class Music extends Media{
         this.artist = artist;
     }
 
-    public void listen(User user){
+    public void listen(User user) {
         boolean wasListened = false;
         if (user == null) {
             System.out.println("The user can not be empty");
@@ -34,18 +34,18 @@ public class Music extends Media{
             }
 
             if (wasListened) {
-                System.out.println("The "+getMediaType()+" has been listened to successfully");
+                System.out.println("The " + getMediaType() + " has been listened to successfully");
             } else {
-                System.out.println("An error occurred while listening to the "+getMediaType()); // no more slots in user list
+                System.out.println("An error occurred while listening to the " + getMediaType()); // no more slots in user list
             }
         }
 
     }
 
-    public List<Music> generatePlaylist(List<Music> musicCatalog){
+    public List<Music> generatePlaylist(List<Music> musicCatalog) {
         List<Music> recommendations = new ArrayList<>();
-        for (int i = 0; i <= musicCatalog.size()-1; i++) {
-            if (musicCatalog.get(i).getArtist().equals(this.getArtist())){
+        for (int i = 0; i <= musicCatalog.size() - 1; i++) {
+            if (musicCatalog.get(i).getArtist().equals(this.getArtist())) {
                 recommendations.add(musicCatalog.get(i));
             }
         }
@@ -55,7 +55,7 @@ public class Music extends Media{
 
     @Override
     public String getMediaType() {
-        if (getPrice() >=10){
+        if (getPrice() >= 10) {
             return "Premium Music";
         } else {
             return "Music";
@@ -64,6 +64,6 @@ public class Music extends Media{
 
     @Override
     public String toString() {
-        return "Media type: "+getMediaType()+", artist: "+artist+", "+super.toString();
+        return "Media type: " + getMediaType() + ", artist: " + artist + ", " + super.toString();
     }
 }

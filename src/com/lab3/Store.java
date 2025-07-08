@@ -25,20 +25,23 @@ public class Store {
         this.media = media;
     }
 
-    public void addUser(User user){
+    public void addUser(User user) {
         //TODO  Adds a user to the list of users.
     }
-    public User[] displayUsers(){
+
+    public User[] displayUsers() {
         //TODO Displays a list of registered users.
     }
 
-    public void addMedia(Media media){
+    public void addMedia(Media media) {
         //TODO  Adds a media to the list of medias
     }
-    public Media[] displayMedias(){
+
+    public Media[] displayMedias() {
         //TODO Displays a list of Available medias.
     }
-    public Book searchBook(String title){
+
+    public Book searchBook(String title) {
         //TODO Searches for a book by title and returns it if found.
     }
 }

@@ -34,9 +34,9 @@ public class Movie extends Media {
             }
 
             if (wasWatched) {
-                System.out.println("The movie has been watched successfully");
+                System.out.println("The "+getMediaType()+" has been watched successfully");
             } else {
-                System.out.println("An error occurred while watching the movie"); // no more slots in user list
+                System.out.println("An error occurred while watching the "+getMediaType()); // no more slots in user list
             }
         }
     }

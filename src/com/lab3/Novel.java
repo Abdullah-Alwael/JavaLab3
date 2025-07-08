@@ -18,8 +18,11 @@ public class Novel extends Book {
 
     @Override
     public String getMediaType() {
-        //TODO "Bestselling Novel" if Average Rating more than or
-        //equal 4.5, else return "Novel".
+        if (getAverageRating() >= 4.5){
+            return "Bestselling Novel";
+        } else {
+            return "Novel";
+        }
     }
 
     @Override

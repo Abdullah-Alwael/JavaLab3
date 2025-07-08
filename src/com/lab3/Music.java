@@ -34,9 +34,9 @@ public class Music extends Media{
             }
 
             if (wasListened) {
-                System.out.println("The music has been listened to successfully");
+                System.out.println("The "+getMediaType()+" has been listened to successfully");
             } else {
-                System.out.println("An error occurred while listening to the music"); // no more slots in user list
+                System.out.println("An error occurred while listening to the "+getMediaType()); // no more slots in user list
             }
         }
 

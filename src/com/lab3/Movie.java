@@ -1,5 +1,6 @@
 package com.lab3;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Movie extends Media {
@@ -18,13 +19,34 @@ public class Movie extends Media {
         this.duration = duration;
     }
 
-    public void watch(User user){
+    public void watch(User user) {
         //TODO  Allows users to watch the movie by adding the movie to
         //the purchased list
+        boolean wasWatched = false;
+        if (user == null) {
+            System.out.println("The user can not be empty");
+        } else {
+            Media[] userList = user.getPurchasedMediaList();
+            for (int i = 0; i <= userList.length - 1; i++) {
+                if (userList[i] == null) { // if the placeholder is not occupied, then add the media there.
+                    userList[i] = this; // add this movie
+                    wasWatched = true;
+                    break; // no need to add it multiple times, only once in an available slot.
+                }
+            }
+
+            if (wasWatched) {
+                System.out.println("The movie has been watched successfully");
+            } else {
+                System.out.println("An error occurred while watching the movie"); // no more slots in user list
+            }
+        }
     }
     public List<Movie> recommendSimilarMovies(List<Movie> movieCatalog){
         //TODO  Recommends
         //similar movies based on the director (author).
+        List<Movie> recommendations = new ArrayList<>();
+
     }
 
     @Override

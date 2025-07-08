@@ -13,7 +13,11 @@ public class Novel extends Book {
     }
 
     public void setGenre(String genre) {
-        this.genre = genre;
+        if (genre != null) {
+            this.genre = genre;
+        } else {
+            System.out.println("Genre can not be empty");
+        }
     }
 
     @Override

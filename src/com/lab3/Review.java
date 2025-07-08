@@ -16,7 +16,11 @@ public class Review {
     }
 
     public void setUserName(String userName) {
-        this.userName = userName;
+        if (userName != null) {
+            this.userName = userName;
+        } else {
+            System.out.println("Username can not be empty");
+        }
     }
 
     public int getRating() {
@@ -24,7 +28,11 @@ public class Review {
     }
 
     public void setRating(int rating) {
-        this.rating = rating;
+        if (rating >= 0 && rating <= 5) {
+            this.rating = rating;
+        } else {
+            System.out.println("Rating can not be negative or out of range (0-5)");
+        }
     }
 
     public String getComment() {
@@ -32,6 +40,10 @@ public class Review {
     }
 
     public void setComment(String comment) {
-        this.comment = comment;
+        if (comment != null) {
+            this.comment = comment;
+        } else {
+            System.out.println("Comment can not be empty");
+        }
     }
 }

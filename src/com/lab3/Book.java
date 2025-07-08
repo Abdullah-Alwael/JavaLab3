@@ -100,11 +100,19 @@ public class Book extends Media {
     }
 
     public void setStock(int stock) {
-        this.stock = stock;
+        if (stock >= 0) {
+            this.stock = stock;
+        } else {
+            System.out.println("Stock can not be negative");
+        }
     }
 
     public void setReview(Review[] review) {
-        this.review = review;
+        if (review != null) {
+            this.review = review;
+        } else {
+            System.out.println("Review list can not be empty");
+        }
     }
 
     @Override

@@ -18,7 +18,11 @@ public class User {
     }
 
     public void setUserName(String userName) {
-        this.userName = userName;
+        if (userName != null) {
+            this.userName = userName;
+        } else {
+            System.out.println("Username can not be empty");
+        }
     }
 
     public String getEmail() {
@@ -26,7 +30,11 @@ public class User {
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        if (email != null) {
+            this.email = email;
+        } else {
+            System.out.println("Email can not be empty");
+        }
     }
 
     public Media[] getPurchasedMediaList() {
@@ -34,7 +42,11 @@ public class User {
     }
 
     public void setPurchasedMediaList(Media[] purchasedMediaList) {
-        this.purchasedMediaList = purchasedMediaList;
+        if (purchasedMediaList != null) {
+            this.purchasedMediaList = purchasedMediaList;
+        } else {
+            System.out.println("Purchased list can not be empty");
+        }
     }
 
     public Media[] getShoppingCart() {
@@ -42,7 +54,11 @@ public class User {
     }
 
     public void setShoppingCart(Media[] shoppingCart) {
-        this.shoppingCart = shoppingCart;
+        if (shoppingCart != null) {
+            this.shoppingCart = shoppingCart;
+        } else {
+            System.out.println("Shopping cart can not be empty");
+        }
     }
 
     public void addToCart(Media media) {

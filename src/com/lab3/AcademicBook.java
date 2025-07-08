@@ -13,7 +13,11 @@ public class AcademicBook extends Book {
     }
 
     public void setSubject(String subject) {
-        this.subject = subject;
+        if (subject != null) {
+            this.subject = subject;
+        } else {
+            System.out.println("Subject can not be empty");
+        }
     }
 
     @Override

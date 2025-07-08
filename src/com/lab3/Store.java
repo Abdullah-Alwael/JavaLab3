@@ -14,7 +14,11 @@ public class Store {
     }
 
     public void setUsers(User[] users) {
-        this.users = users;
+        if (users != null) {
+            this.users = users;
+        } else {
+            System.out.println("User list can not be empty");
+        }
     }
 
     public Media[] getMedias() {
@@ -22,7 +26,11 @@ public class Store {
     }
 
     public void setMedias(Media[] medias) {
-        this.medias = medias;
+        if (medias != null) {
+            this.medias = medias;
+        } else {
+            System.out.println("Media list can not be empty");
+        }
     }
 
     public void addUser(User user) {

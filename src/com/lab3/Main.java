@@ -1,7 +1,6 @@
 package com.lab3;
 
 // deadline 8AM, make clear tests
-// TODO check all set methods for input validation
 public class Main {
     public static void main(String[] args) {
         // create initial 5 users who have bought and reviewed everything from the store:

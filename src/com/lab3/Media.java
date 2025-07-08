@@ -30,19 +30,35 @@ public class Media {
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        if (title != null) {
+            this.title = title;
+        } else {
+            System.out.println("Title can not be empty");
+        }
     }
 
     public void setAuthor(String author) {
-        this.author = author;
+        if (author != null) {
+            this.author = author;
+        } else {
+            System.out.println("Author can not be empty");
+        }
     }
 
     public void setISBN(String ISBN) {
-        this.ISBN = ISBN;
+        if (ISBN != null) {
+            this.ISBN = ISBN;
+        } else {
+            System.out.println("ISBN can not be empty");
+        }
     }
 
     public void setPrice(double price) {
-        this.price = price;
+        if (price >= 0) { // can be free
+            this.price = price;
+        } else {
+            System.out.println("Price can not be negative"); // give free money to customers
+        }
     }
 
     public String getMediaType() {

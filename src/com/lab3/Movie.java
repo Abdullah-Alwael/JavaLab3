@@ -16,7 +16,11 @@ public class Movie extends Media {
     }
 
     public void setDuration(int duration) {
-        this.duration = duration;
+        if (duration > 0) {
+            this.duration = duration;
+        } else {
+            System.out.println("The movie can not have 0 or negative duration"); // a movie that gives us more time?
+        }
     }
 
     public void watch(User user) {

@@ -16,7 +16,11 @@ public class Music extends Media {
     }
 
     public void setArtist(String artist) {
-        this.artist = artist;
+        if (artist != null) {
+            this.artist = artist;
+        } else {
+            System.out.println("Artist can not be empty");
+        }
     }
 
     public void listen(User user) {

@@ -20,8 +20,6 @@ public class Movie extends Media {
     }
 
     public void watch(User user) {
-        //TODO  Allows users to watch the movie by adding the movie to
-        //the purchased list
         boolean wasWatched = false;
         if (user == null) {
             System.out.println("The user can not be empty");
@@ -43,16 +41,23 @@ public class Movie extends Media {
         }
     }
     public List<Movie> recommendSimilarMovies(List<Movie> movieCatalog){
-        //TODO  Recommends
-        //similar movies based on the director (author).
         List<Movie> recommendations = new ArrayList<>();
+        for (int i = 0; i <= movieCatalog.size()-1; i++) {
+            if (movieCatalog.get(i).getAuthor().equals(this.getAuthor())){
+                recommendations.add(movieCatalog.get(i));
+            }
+        }
 
+        return recommendations;
     }
 
     @Override
     public String getMediaType(){
-        //TODO return "Long Movie" if duration more than or
-        //equel 120, else return "Movie".
+        if (duration >=120){
+            return "Long Movie";
+        } else {
+            return "Movie";
+        }
     }
 
     @Override
